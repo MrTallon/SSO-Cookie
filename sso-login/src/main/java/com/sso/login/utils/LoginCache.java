@@ -13,7 +13,9 @@ import java.util.Map;
  */
 public class LoginCache {
 
-    // 登录用户
+    /**
+     * 登录用户
+     */
     public static Map<String, User> loginUser = new HashMap<>();
 
 

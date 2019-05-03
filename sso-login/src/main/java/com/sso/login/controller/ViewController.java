@@ -29,7 +29,7 @@ public class ViewController {
      */
     @GetMapping("/login")
     public String login(@RequestParam(required = false, defaultValue = "") String target, HttpSession session,
-                        @CookieValue(required = false,value = "TOKEN") Cookie cookie) {
+                        @CookieValue(required = false, value = "TOKEN") Cookie cookie) {
 
         if (StringUtils.isEmpty(target)) {
             target = "http://www.codeshop.com:9010";
@@ -47,10 +47,4 @@ public class ViewController {
         session.setAttribute("target", target);
         return "login";
     }
-
-    @GetMapping("test")
-    public String test() {
-        return "test";
-    }
-
 }

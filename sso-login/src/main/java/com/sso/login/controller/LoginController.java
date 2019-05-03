@@ -30,7 +30,7 @@ public class LoginController {
 
     static {
         dbUsers = new HashSet<>();
-        dbUsers.add(new User(0, "占三", "12345"));
+        dbUsers.add(new User(0, "张三", "12345"));
         dbUsers.add(new User(1, "李三", "12345"));
         dbUsers.add(new User(2, "王三", "12345"));
         dbUsers.add(new User(3, "赵老爷子", "12345"));

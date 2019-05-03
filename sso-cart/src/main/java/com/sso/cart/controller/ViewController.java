@@ -39,4 +39,12 @@ public class ViewController {
         return "index";
     }
 
+    @GetMapping("/exit")
+    public String exit(@CookieValue(required = false, value = "TOKEN") Cookie cookie) {
+        if (cookie != null) {
+            cookie.setMaxAge(0);
+        }
+        return "redirect:http://cart.codeshop.com:9012/view/index";
+    }
+
 }
